@@ -12,10 +12,8 @@
 	<key>patterns</key>
 	<array>
 		<dict>
-			<key>match</key>
-			<string>//.*</string>
-			<key>name</key>
-			<string>comment.line.double-slash.asciidoc</string>
+			<key>include</key>
+			<string>#inline</string>
 		</dict>
 		<dict>
 			<key>match</key>
@@ -30,14 +28,28 @@
 			<string>^\s*$</string>
 			<key>name</key>
 			<string>markup.list.unnumbered.asciidoc</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>#inline</string>
+				</dict>
+			</array>
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>^\d\..*</string>
+			<string>^\d+\.  .*</string>
 			<key>end</key>
 			<string>^\s*$</string>
 			<key>name</key>
 			<string>markup.list.numbered.asciidoc</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>#inline</string>
+				</dict>
+			</array>
 		</dict>
 		<dict>
 			<key>begin</key>
@@ -57,44 +69,28 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>^-+$</string>
+			<string>^WARNING:.*</string>
 			<key>end</key>
-			<string>^-+$</string>
+			<string>^\s*$</string>
+			<key>name</key>
+			<string>markup.quote.warning.asciidoc</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>^----+$</string>
+			<key>end</key>
+			<string>^----+$</string>
 			<key>name</key>
 			<string>markup.raw.asciidoc</string>
-		</dict>
-		<dict>
-			<key>captures</key>
-			<dict>
-				<key>1</key>
+			<key>patterns</key>
+			<array>
 				<dict>
+					<key>match</key>
+					<string>&lt;\d+&gt;</string>
 					<key>name</key>
-					<string>punctuation.definition.raw.asciidoc</string>
+					<string>markup.list.numbered.callout.asciidoc</string>
 				</dict>
-				<key>2</key>
-				<dict/>
-				<key>3</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.raw.asciidoc</string>
-				</dict>
-			</dict>
-			<key>match</key>
-			<string>(`)(.*)(`)</string>
-			<key>name</key>
-			<string>markup.raw.asciidoc</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>\*.*\*</string>
-			<key>name</key>
-			<string>markup.bold.asciidoc</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>_.*_</string>
-			<key>name</key>
-			<string>markup.italic.asciidoc</string>
+			</array>
 		</dict>
 		<dict>
 			<key>match</key>
@@ -175,6 +171,77 @@
 			<string>variable.other.asciidoc</string>
 		</dict>
 	</array>
+	<key>repository</key>
+	<dict>
+		<key>inline</key>
+		<dict>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>#comment</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#raw</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#bold</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#italic</string>
+				</dict>
+			</array>
+			<key>repository</key>
+			<dict>
+				<key>bold</key>
+				<dict>
+					<key>match</key>
+					<string>\*.*\*</string>
+					<key>name</key>
+					<string>markup.bold.asciidoc</string>
+				</dict>
+				<key>comment</key>
+				<dict>
+					<key>match</key>
+					<string>//.*</string>
+					<key>name</key>
+					<string>comment.line.double-slash.asciidoc</string>
+				</dict>
+				<key>italic</key>
+				<dict>
+					<key>match</key>
+					<string>_.*_</string>
+					<key>name</key>
+					<string>markup.italic.asciidoc</string>
+				</dict>
+				<key>raw</key>
+				<dict>
+					<key>captures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.raw.asciidoc</string>
+						</dict>
+						<key>2</key>
+						<dict/>
+						<key>3</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.raw.asciidoc</string>
+						</dict>
+					</dict>
+					<key>match</key>
+					<string>(`)(.*)(`)</string>
+					<key>name</key>
+					<string>markup.raw.asciidoc</string>
+				</dict>
+			</dict>
+		</dict>
+	</dict>
 	<key>scopeName</key>
 	<string>text.asciidoc</string>
 	<key>uuid</key>

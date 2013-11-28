@@ -18,9 +18,8 @@ osascript -e 'tell app "TextMate" to reload bundles'
 ```
 
 ## Status
-Only basic language syntax is supported currently and syntax highlighting does
-not nest properly yet. Still, this seemed to give better results than other
-AsciiDoc bundles I tried.
+Only basic language syntax is supported currently. Still, this seemed to give
+better results than other AsciiDoc bundles I tried.
 
 Tested using TextMate 2. May work in TextMate 1 or Sublime Text; I've no idea.
 
