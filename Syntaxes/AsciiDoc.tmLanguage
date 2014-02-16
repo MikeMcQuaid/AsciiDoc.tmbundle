@@ -77,9 +77,9 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>^----+$</string>
+			<string>^(```\w*|----+)$</string>
 			<key>end</key>
-			<string>^----+$</string>
+			<string>^(```|----+)$</string>
 			<key>name</key>
 			<string>markup.raw.asciidoc</string>
 			<key>patterns</key>
@@ -124,31 +124,31 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>^={1}.*$</string>
+			<string>^[=#]{1}.*$</string>
 			<key>name</key>
 			<string>markup.heading.0.asciidoc</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>^={2}.*$</string>
+			<string>^[=#]{2}.*$</string>
 			<key>name</key>
 			<string>markup.heading.1.asciidoc</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>^={3}.*$</string>
+			<string>^[=#]{3}.*$</string>
 			<key>name</key>
 			<string>markup.heading.2.asciidoc</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>^={4}.*$</string>
+			<string>^[=#]{4}.*$</string>
 			<key>name</key>
 			<string>markup.heading.3.asciidoc</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>^={5}.*$</string>
+			<string>^[=#]{5}.*$</string>
 			<key>name</key>
 			<string>markup.heading.4.asciidoc</string>
 		</dict>
@@ -235,7 +235,7 @@
 						</dict>
 					</dict>
 					<key>match</key>
-					<string>(`)(.*)(`)</string>
+					<string>(`)([^`]+)(`)</string>
 					<key>name</key>
 					<string>markup.raw.asciidoc</string>
 				</dict>
