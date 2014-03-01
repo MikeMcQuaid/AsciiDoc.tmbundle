@@ -175,7 +175,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>^.*&lt;.*&gt;$</string>
+			<string>^.+&lt;.+@.+&gt;$</string>
 			<key>name</key>
 			<string>variable.other.author.asciidoc</string>
 		</dict>
@@ -195,6 +195,10 @@
 				<dict>
 					<key>include</key>
 					<string>#comment</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#link</string>
 				</dict>
 				<dict>
 					<key>include</key>
@@ -231,6 +235,13 @@
 					<string>_.*_</string>
 					<key>name</key>
 					<string>markup.italic.asciidoc</string>
+				</dict>
+				<key>link</key>
+				<dict>
+					<key>match</key>
+					<string>&lt;&lt;[^&gt;]*&gt;&gt;</string>
+					<key>name</key>
+					<string>markup.underline.link.asciidoc</string>
 				</dict>
 				<key>raw</key>
 				<dict>
