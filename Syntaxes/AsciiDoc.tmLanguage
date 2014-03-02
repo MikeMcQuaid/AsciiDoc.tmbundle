@@ -92,6 +92,14 @@
 		</dict>
 		<dict>
 			<key>begin</key>
+			<string>^\|===$</string>
+			<key>end</key>
+			<string>^\|===$</string>
+			<key>name</key>
+			<string>markup.list.table.asciidoc</string>
+		</dict>
+		<dict>
+			<key>begin</key>
 			<string>^(```\w*|----+)$</string>
 			<key>end</key>
 			<string>^(```|----+)$</string>
