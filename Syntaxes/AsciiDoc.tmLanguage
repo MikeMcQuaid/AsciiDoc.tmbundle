@@ -23,7 +23,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>^\*.*</string>
+			<string>^\* </string>
 			<key>end</key>
 			<string>^\s*$</string>
 			<key>name</key>
@@ -226,7 +226,7 @@
 				<key>bold</key>
 				<dict>
 					<key>match</key>
-					<string>\*.*\*</string>
+					<string>\*[^\*]+\*</string>
 					<key>name</key>
 					<string>markup.bold.asciidoc</string>
 				</dict>
@@ -240,14 +240,14 @@
 				<key>italic</key>
 				<dict>
 					<key>match</key>
-					<string>_.*_</string>
+					<string>_[^_]+_</string>
 					<key>name</key>
 					<string>markup.italic.asciidoc</string>
 				</dict>
 				<key>link</key>
 				<dict>
 					<key>match</key>
-					<string>&lt;&lt;[^&gt;]*&gt;&gt;</string>
+					<string>&lt;&lt;[^&gt;]+&gt;&gt;</string>
 					<key>name</key>
 					<string>markup.underline.link.asciidoc</string>
 				</dict>
