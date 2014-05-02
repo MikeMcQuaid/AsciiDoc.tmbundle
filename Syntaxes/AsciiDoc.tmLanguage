@@ -80,7 +80,7 @@
 			<key>end</key>
 			<string>^\s*$</string>
 			<key>name</key>
-			<string>markup.quote.note.asciidoc</string>
+			<string>markup.note.asciidoc</string>
 		</dict>
 		<dict>
 			<key>begin</key>
@@ -88,7 +88,7 @@
 			<key>end</key>
 			<string>^\s*$</string>
 			<key>name</key>
-			<string>markup.quote.warning.asciidoc</string>
+			<string>markup.warning.asciidoc</string>
 		</dict>
 		<dict>
 			<key>begin</key>
