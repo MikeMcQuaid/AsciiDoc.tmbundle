@@ -177,6 +177,18 @@
 		</dict>
 		<dict>
 			<key>match</key>
+			<string>indexterm:\[.*\]</string>
+			<key>name</key>
+			<string>variable.other.indexterm.asciidoc</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\(\(\(.*\)\)\)</string>
+			<key>name</key>
+			<string>variable.other.indexterm.asciidoc</string>
+		</dict>
+		<dict>
+			<key>match</key>
 			<string>^image::.*$</string>
 			<key>name</key>
 			<string>variable.other.image.block.asciidoc</string>
@@ -186,6 +198,12 @@
 			<string>^.+&lt;.+@.+&gt;$</string>
 			<key>name</key>
 			<string>variable.other.author.asciidoc</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>^\[\[.*\]\]$</string>
+			<key>name</key>
+			<string>variable.other.attribute.asciidoc</string>
 		</dict>
 		<dict>
 			<key>match</key>
