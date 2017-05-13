@@ -2,19 +2,10 @@
 TextMate support for AsciiDoc.
 
 ## Installation
-### TextMate 2
-```bash
-mkdir -p ~/Library/Application\ Support/Avian/Bundles
-cd ~/Library/Application\ Support/Avian/Bundles
-git clone git://github.com/mikemcquaid/AsciiDoc.tmbundle
-```
-
-### TextMate 1
 ```bash
 mkdir -p ~/Library/Application\ Support/TextMate/Bundles
 cd ~/Library/Application\ Support/TextMate/Bundles
 git clone git://github.com/mikemcquaid/AsciiDoc.tmbundle
-osascript -e 'tell app "TextMate" to reload bundles'
 ```
 
 ## Status
